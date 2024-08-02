@@ -11,6 +11,10 @@ import javafx.stage.StageStyle;
 import java.io.IOException;
 
 public class Program extends javafx.application.Application {
+
+    private double xOffset = 0;
+    private double yOffset = 0;
+    
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(Program.class.getResource("gui-view.fxml"));
@@ -35,6 +39,17 @@ public class Program extends javafx.application.Application {
 
         // Configurando a cor de fundo da cena como transparente
         scene.setFill(Color.TRANSPARENT);
+
+        // Adicionando funcionalidade de arrastar
+        root.setOnMousePressed(event -> {
+            xOffset = event.getSceneX();
+            yOffset = event.getSceneY();
+        });
+
+        root.setOnMouseDragged(event -> {
+            stage.setX(event.getScreenX() - xOffset);
+            stage.setY(event.getScreenY() - yOffset);
+        });
 
         stage.setTitle("Login Form");
         stage.setScene(scene);

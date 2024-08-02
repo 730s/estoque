@@ -1,0 +1,21 @@
+/* styles.css */
+
+/* Define the root background and general style */
+#root {
+    -fx-background-color: #151515; /* Cinza escuro quase preto */
+    -fx-padding: 0; /* Remove padding para colocar o botão mais no canto */
+}
+
+/* Estilo para o botão de fechar */
+.close-button {
+    -fx-background-color: transparent;
+    -fx-padding: 5px;
+    -fx-cursor: hand;
+    -fx-alignment: top-right;
+    -fx-translate-x: -10px; /* Ajusta a posição horizontal */
+    -fx-translate-y: 10px; /* Ajusta a posição vertical */
+}
+
+.close-button:hover .image-view {
+    -fx-opacity: 0.8; /* Efeito de hover */
+}

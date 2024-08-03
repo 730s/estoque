@@ -3,7 +3,7 @@ package br.com.project.demo;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import javafx.scene.layout.VBox;
+import javafx.scene.layout.BorderPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import javafx.stage.StageStyle;
@@ -14,11 +14,11 @@ public class Program extends javafx.application.Application {
 
     private double xOffset = 0;
     private double yOffset = 0;
-    
+
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(Program.class.getResource("gui-view.fxml"));
-        VBox root = fxmlLoader.load();
+        BorderPane root = fxmlLoader.load();
 
         // Criando uma forma retangular com cantos arredondados
         Rectangle clip = new Rectangle(400, 420);

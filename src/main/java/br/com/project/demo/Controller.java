@@ -6,6 +6,8 @@ import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
+import javafx.scene.control.TextField;
+import javafx.scene.control.PasswordField;
 
 import java.io.InputStream;
 import java.net.URL;
@@ -18,6 +20,12 @@ public class Controller {
 
     @FXML
     private ImageView closeImageView;
+
+    @FXML
+    private TextField usernameField;
+
+    @FXML
+    private PasswordField passwordField;
 
     @FXML
     public void initialize() {
@@ -33,4 +41,3 @@ public class Controller {
         stage.close(); // Fecha a janela
     }
 }
-

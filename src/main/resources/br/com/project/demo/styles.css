@@ -19,3 +19,30 @@
 .close-button:hover .image-view {
     -fx-opacity: 0.8; /* Efeito de hover */
 }
+
+#usernameField {
+-fx-background-color: #151515; /* Cinza escuro */
+    -fx-text-fill: #FFFFFF; /* Branco */
+    -fx-padding: 5px;
+    -fx-border-width: 1px;
+    -fx-border-color:#19e5e6;
+    -fx-border-width: 1;
+    -fx-border-radius: 14;
+    -fx-margin-bottom: 10px;
+
+}
+
+#passwordField {
+-fx-background-color: #151515; /* Cinza escuro */
+    -fx-text-fill: #FFFFFF; /* Branco */
+    -fx-padding: 5px;
+    -fx-border-width: 1px;
+    -fx-border-color:#19e5e6;
+    -fx-border-width: 1;
+    -fx-border-radius: 14;
+    -fx-margin-top: 10px;
+}
+
+#usernameField:focused, #passwordField:focused {
+    -fx-border-color: #FFFFFF; /* Branco */
+}
